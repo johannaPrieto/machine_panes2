@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Bakery - En busca de tu pan favorito</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IA BAKERY</h1>
+            <p class="subtitle">En busca de tu pan favorito</p>
+        </header>
+        
+        <div class="main-content">
+            <button class="start-button" id="startButton">Iniciar</button>
+            
+            <div class="options" id="options">
+                <div class="option" id="camera-option">
+                    <div class="option-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#8b4513" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="option-title">Cámara</h3>
+                </div>
+                
+                <div class="option" id="recipe-option">
+                    <div class="option-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#8b4513" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="option-title">Receta</h3>
+                </div>
+            </div>
+            
+            <div class="model-status model-loading" id="model-status">
+                <div class="loading"></div> Cargando modelo de IA...
+            </div>
+            
+            <div class="camera-container" id="camera-container">
+                <h2 class="camera-title">Identifica tu pan favorito</h2>
+                <div id="webcam-container"></div>
+                
+                <div class="timer-container" id="timer-container" style="display: none;">
+                    Analizando: <span id="timer-text">10</span> segundos
+                    <div class="timer-bar">
+                        <div class="timer-progress" id="timer-progress"></div>
+                    </div>
+                </div>
+                
+                <div class="camera-controls">
+                    <button class="camera-button" id="start-camera">Iniciar cámara</button>
+                    <button class="camera-button" id="stop-camera" disabled>Detener cámara</button>
+                </div>
+                
+                <div class="results-container" id="results-container">
+                    <h3 class="result-title">Resultados:</h3>
+                    <div id="label-container"></div>
+                </div>
+            </div>
+            
+            <div class="recipe-container" id="recipe-container">
+                <h2 class="recipe-title" id="recipe-title">RECETA DEL PAN DE GUEY</h2>
+                
+                <div class="recipe-content">
+                    <div class="ingredients">
+                        <h3 class="section-title">Ingredientes</h3>
+                        <ul id="ingredients-list">
+                            <li>500g de harina de trigo</li>
+                            <li>10g de sal</li>
+                            <li>25g de azúcar</li>
+                            <li>10g de levadura fresca</li>
+                            <li>300ml de agua tibia</li>
+                            <li>30ml de aceite de oliva</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="steps">
+                        <h3 class="section-title">Pasos de preparación</h3>
+                        <ol id="steps-list">
+                            <li>Disuelve la levadura en agua tibia con una cucharadita de azúcar.</li>
+                            <li>En un bol grande, mezcla la harina con la sal y el resto del azúcar.</li>
+                            <li>Agrega la mezcla de levadura y el aceite de oliva a los ingredientes secos.</li>
+                            <li>Amasa durante 10 minutos hasta obtener una masa elástica.</li>
+                            <li>Deja reposar la masa en un lugar cálido durante 1 hora o hasta que duplique su tamaño.</li>
+                            <li>Divide la masa en porciones y dales forma de pan.</li>
+                            <li>Coloca los panes en una bandeja enharinada y deja reposar 30 minutos más.</li>
+                            <li>Hornea a 200°C durante 20-25 minutos hasta que estén dorados.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <button class="close-recipe" id="close-recipe">Cerrar receta</button>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Email: info@iabakery.com</p>
+        </div>
+    </div>
+
+    <!-- Cargar TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+    <!-- Cargar Teachable Machine -->
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    
+    <!-- Cargar el script de la aplicación después de las bibliotecas -->
+    <script src="script.js"></script>
+</body>
+</html>
