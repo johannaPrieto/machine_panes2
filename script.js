@@ -28,7 +28,7 @@ const recetas = {
             "Hornea a 180°C por 15-20 minutos o hasta que estén dorados."
         ]
     },
-    "Pan de yoyo": {
+    "pan de yoyo": {
         nombre: "Pan de Yoyo",
         ingredientes: [
             "400g de harina de trigo",
@@ -55,7 +55,7 @@ const recetas = {
             "Pasa los bordes por coco rallado."
         ]
     },
-    "Puerco de piloncillo": {
+    "puerco de piloncillo": {
         nombre: "Puerquito de Piloncillo",
         ingredientes: [
             "500g de harina de trigo",
@@ -106,7 +106,7 @@ const recetas = {
             "Hornea a 200°C por 25-30 minutos hasta que esté dorada."
         ]
     },
-    "Chilindrina": {
+    "chilindrina": {
         nombre: "Chilindrina",
         ingredientes: [
             "500g de harina de trigo",
@@ -164,7 +164,7 @@ const recetas = {
             "Hornea a 180°C por 20 minutos."
         ]
     },
-    "Donas": {
+    "donas": {
         nombre: "Donas",
         ingredientes: [
             "500g de harina de trigo",
@@ -245,7 +245,7 @@ const recetas = {
             "Espolvorea con azúcar glass antes de servir."
         ]
     },
-    "Garibaldi": {
+    "garibaldi": {
         nombre: "Garibaldi",
         ingredientes: [
             "500g de harina de trigo",
@@ -290,7 +290,7 @@ const recetas = {
             "Deja enfriar antes de servir."
         ]
     },
-    "Birote": {
+    "birote": {
         nombre: "Birote",
         ingredientes: [
             "500g de harina de trigo",
@@ -314,7 +314,7 @@ const recetas = {
             "Continúa horneando por otros 15-20 minutos hasta que estén dorados."
         ]
     },
-    "Bolillo": {
+    "bolillo": {
         nombre: "Bolillo",
         ingredientes: [
             "500g de harina de trigo",
@@ -357,7 +357,7 @@ const recetas = {
             "Hornea a 200°C por 20-25 minutos hasta que estén dorados."
         ]
     },
-    "Moño": {
+    "moño": {
         nombre: "Pan de Moño",
         ingredientes: [
             "500g de harina de trigo",
@@ -383,7 +383,7 @@ const recetas = {
             "Una vez fríos, espolvorea con azúcar glass."
         ]
     },
-    "Mantecada": {
+    "mantecada": {
         nombre: "Mantecada",
         ingredientes: [
             "250g de harina de trigo",
@@ -405,7 +405,7 @@ const recetas = {
             "Deja enfriar antes de desmoldar."
         ]
     },
-    "Niño envuelto": {
+    "niño envuelto": {
         nombre: "Niño Envuelto",
         ingredientes: [
             "500g de harina de trigo",
@@ -433,7 +433,7 @@ const recetas = {
             "Hornea a 180°C por 20 minutos."
         ]
     },
-    "Empanada": {
+    "empanada": {
         nombre: "Empanada",
         ingredientes: [
             "300g de harina de trigo",
@@ -565,7 +565,7 @@ const recetas = {
             "Decora con nueces picadas."
         ]
     },
-    "Pinguino": {
+    "pinguino": {
         nombre: "Pinguino",
         ingredientes: [
             "500g de harina de trigo",
@@ -596,7 +596,7 @@ const recetas = {
             "Deja enfriar hasta que el chocolate se solidifique."
         ]
     },
-    "Piedra": {
+    "piedra": {
         nombre: "Piedra",
         ingredientes: [
             "500g de harina de trigo",
@@ -809,7 +809,7 @@ function updateTimer() {
         // Mostrar la receta del pan con mayor porcentaje que tenga receta
         let foundRecipe = false;
         for (let pred of sortedPredictions) {
-            const panName = pred.className.toLowerCase();
+            const panName = pred.className.toLowerCase().trim();
             if (recetas[panName]) {
                 showPanRecipe(panName);
                 foundRecipe = true;
