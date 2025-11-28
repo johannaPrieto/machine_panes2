@@ -80,12 +80,5 @@ Si quieres usar tu propio modelo entrenado en Teachable Machine:
 - Para desarrollo, cualquier servidor local será suficiente (ver sección "Ejecutar la app localmente").
 - Si quieres ver logs y errores: abre DevTools (F12) y revisa la consola y la pestaña "Network".
 
-## ⚖️ Licencia
-- Este proyecto no tiene licencia específica incluida. Añade un `LICENSE` si deseas especificar los términos de uso/redistribución.
-
 ## ✉️ Contacto
 - Si tienes dudas o quieres ayuda, deja una issue en el repositorio o añade un correo en la sección de contacto.
-¡Listo! Si quieres, puedo: 
-- Adjuntar un `LICENSE` apropiado (MIT/Apache/CC) y una sección de contribución.
-- Añadir un comando de `package.json` para ejecutar un servidor local con NPM.
-- Incluir una versión donde las librerías se carguen localmente para modo offline.
